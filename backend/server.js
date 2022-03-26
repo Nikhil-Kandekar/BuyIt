@@ -54,6 +54,7 @@ const PORT = process.env.PORT || 5000
 
 app.listen(
   PORT,
+  '127.0.0.1'||'192.168.29.104',
   console.log(
     `Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold
   )
