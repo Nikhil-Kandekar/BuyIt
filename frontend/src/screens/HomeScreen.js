@@ -9,6 +9,7 @@ import Paginate from '../components/Paginate'
 import ProductCarousel from '../components/ProductCarousel'
 import Meta from '../components/Meta'
 import { listProducts } from '../actions/productActions'
+// import ReviewsScreen from './ReviewsScreen'
 // import CustomChatbot from '../components/Chatbot_simple'
 // import Chatbot_dynamic from '../components/Chatbot/Chatbot_dynamic'
 
@@ -55,6 +56,7 @@ const HomeScreen = ({ match }) => {
             page={page}
             keyword={keyword ? keyword : ''}
           />
+          
           {/* <CustomChatbot /> */}
           {/* <Chatbot_dynamic /> */}
         </>

@@ -2,6 +2,7 @@ import express from 'express'
 const router = express.Router()
 import {
   getProducts,
+  // getAllProducts,
   getProductById,
   deleteProduct,
   createProduct,
@@ -19,5 +20,7 @@ router
   .get(getProductById)
   .delete(protect, admin, deleteProduct)
   .put(protect, admin, updateProduct)
+
+// router.get('/allproducts', getAllProducts)
 
 export default router

@@ -5,7 +5,7 @@ import Product from '../models/productModel.js'
 // @route   GET /api/products
 // @access  Public
 const getProducts = asyncHandler(async (req, res) => {
-  const pageSize = 12
+  const pageSize = 9999
   const page = Number(req.query.pageNumber) || 1
 
   const keyword = req.query.keyword
@@ -157,8 +157,34 @@ const getTopProducts = asyncHandler(async (req, res) => {
   res.json(products)
 })
 
+// //@desc    Get all products
+// //@route   GET /api/allproducts
+// //@access  Public
+// const getAllProducts = asyncHandler(async (req, res) => {
+//   const pageSize = 999999
+//   const page = Number(req.query.pageNumber) || 1
+
+//   const keyword = req.query.keyword
+//     ? {
+//         name: {
+//           $regex: req.query.keyword,
+//           $options: 'i',
+//         },
+//       }
+//     : {}
+
+//   const count = await Product.countDocuments({ ...keyword })
+//   const products = await Product.find({ ...keyword })
+//     .limit(pageSize)
+//     .skip(pageSize * (page - 1))
+
+//   res.json({ products, page, pages: Math.ceil(count / pageSize) })
+// })
+
+
 export {
   getProducts,
+  // getAllProducts,
   getProductById,
   deleteProduct,
   createProduct,

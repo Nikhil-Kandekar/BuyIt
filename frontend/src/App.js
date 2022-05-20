@@ -18,6 +18,8 @@ import UserEditScreen from './screens/UserEditScreen'
 import ProductListScreen from './screens/ProductListScreen'
 import ProductEditScreen from './screens/ProductEditScreen'
 import OrderListScreen from './screens/OrderListScreen'
+import ReviewsScreen from './screens/ReviewsScreen'
+import WebcamScreen from './screens/WebcamScreen'
 
 const App = () => {
   return (
@@ -56,6 +58,8 @@ const App = () => {
             exact
           />
           <Route path='/' component={HomeScreen} exact />
+          <Route path='/admin/fakereviews' component={ReviewsScreen} exact />
+          <Route path='/bodymeasurement' component={WebcamScreen} exact />
         </Container>
       </main>
       <Footer />
