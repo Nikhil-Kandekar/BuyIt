@@ -42,7 +42,7 @@ const ReviewsScreen = () => {
                 <td>{review.name}</td>
                 <td>{review.rating}</td>
                 <td>{review.comment}</td>
-                <td>{review.flag || "REAL"}</td>
+                <td>{review.flag==="fake"?"FAKE": "REAL"}</td>
                 <td></td>
             </tr>))
         ))}
